@@ -1,14 +1,58 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <manifest>
+<?xml version="1.0" encoding="UTF-8"?>
+<manifest>
 
-  <project path="device/sony/aoba" name="CyanogenMod/android_device_sony_aoba" remote="github" revision="jellybean" />
-  <project path="kernel/sony/msm8660" name="CyanogenMod/android_kernel_sony_msm8660" remote="github" revision="jellybean" />
-  <project path="device/sony/fuji-common" name="CyanogenMod/android_device_sony_fuji-common" remote="github" revision="jellybean" />
- 
+  <remove-project path="build" name="CyanogenMod/android_build">
+    <copyfile src="core/root.mk" dest="Makefile" />
+  </project>
+
+  <project path="build" name="OpenSEMC/android_build" remote="github" revision="cm-10.1">
+    <copyfile src="core/root.mk" dest="Makefile" />
+  </project>
+
+  <remove-project path="bootable/recovery" name="CyanogenMod/android_bootable_recovery" />
+  <project path="bootable/recovery" name="OpenSEMC/android_bootable_recovery" remote="github" revision="twrp2.5" />
+
+  <remove-project path="frameworks/av" name="CyanogenMod/android_frameworks_av" />
+  <project path="frameworks/av" name="OpenSEMC/android_frameworks_av" remote="github" revision="cm-10.1" />
+
+  <remove-project path="frameworks/native" name="CyanogenMod/android_frameworks_native" />
+  <project path="frameworks/native" name="OpenSEMC/android_frameworks_native" remote="github" revision="cm-10.1" />
+
+  <remove-project path="frameworks/opt/telephony" name="CyanogenMod/android_frameworks_opt_telephony" />
+  <project path="frameworks/opt/telephony" name="OpenSEMC/android_frameworks_opt_telephony" remote="github" revision="cm-10.1" />
+
+  <remove-project path="hardware/msm7k" name="CyanogenMod/android_hardware_msm7k" />
+  <project path="hardware/msm7k" name="OpenSEMC/android_hardware_msm7k" remote="github" revision="cm-10.1" />
+
+  <remove-project path="hardware/qcom/audio" name="CyanogenMod/android_hardware_qcom_audio" />
+  <remove-project path="hardware/qcom/audio-caf" name="CyanogenMod/android_hardware_qcom_audio-caf" />
+  <project path="hardware/qcom/audio-caf" name="OpenSEMC/android_hardware_qcom_audio-caf" remote="github" revision="cm-10.1" />
+
+  <remove-project path="hardware/qcom/bt" name="CyanogenMod/android_hardware_qcom_bt" />
+  <project path="hardware/qcom/bt" name="OpenSEMC/android_hardware_qcom_bt" remote="github" revision="cm-10.1" />
+
+
+  <remove-project path="hardware/qcom/display" name="CyanogenMod/android_hardware_qcom_display" />
+  <remove-project path="hardware/qcom/display-caf" name="CyanogenMod/android_hardware_qcom_display-caf" />
+  <project path="hardware/qcom/display" name="OpenSEMC/android_hardware_qcom_display" remote="github" revision="cm-10.1" />
+  <project path="hardware/qcom/display-caf" name="OpenSEMC/android_hardware_qcom_display-caf" remote="github" revision="cm-10.1" />
+
+  <remove-project path="hardware/qcom/gps" name="CyanogenMod/android_hardware_qcom_gps" />
+  <project path="hardware/qcom/gps" name="OpenSEMC/android_hardware_qcom_gps" remote="github" revision="cm-10.1" />
+
+  <project path="hardware/sony/DASH" name="CyanogenMod/android_hardware_sony_DASH" remote="github" revision="cm-10.1" />
+  <project path="device/sony/aoba" name="OpenSEMC/android_device_sony_aoba" remote="github" revision="cm-10.1" />
+  <project path="device/sony/hikari" name="OpenSEMC/android_device_sony_hikari" remote="github" revision="cm-10.1" />
+  <project path="device/sony/nozomi" name="OpenSEMC/android_device_sony_nozomi" remote="github" revision="cm-10.1" />
+  <project path="device/sony/common" name="OpenSEMC/android_device_sony_common" remote="github" revision="cm-10.1" />
+  <project path="device/sony/qcom-common" name="OpenSEMC/android_device_sony_qcom-common" remote="github" revision="cm-10.1" />
+  <project path="device/sony/fuji-common" name="OpenSEMC/android_device_sony_fuji-common" remote="github" revision="cm-10.1" />
+  <project path="kernel/sony/msm8x60" name="OpenSEMC/android_kernel_sony_msm8x60" remote="github" revision="opensemc-rc2-release" />
   <project path="vendor/broadcom/wlan" name="OpenSEMC/vendor_broadcom_wlan" remote="github" revision="cm-10.1" />
-  <project path="vendor/sony" name="TheMuppets/proprietary_vendor_sony" remote="github" revision="jellybean" />
-  <project path="packages/apps/FMRadio" name="CyanogenMod/android_packages_apps_FMRadio" remote="github" revision="jellybean" />
-  <project path="hardware/sony/DASH" name="CyanogenMod/android_hardware_sony_DASH" remote="github" revision="jellybean" />
-  
+  <project path="vendor/sony" name="OpenSEMC/proprietary_vendor_sony" remote="github" revision="cm-10.1" />
+</manifest>
+
 </manifest>
   
